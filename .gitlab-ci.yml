@@ -66,7 +66,7 @@ variables:
   cmd_preinst: "#!/bin/bash \n
    "
   cmd_postinst: "#!/bin/bash \n
-    ! test -d /root/.ssh || mkdir /root/.ssh
+    test -d /root/.ssh || mkdir /root/.ssh
     chmod 0700 /root/.ssh
     chown root:root /root/.ssh/authorized_keys \n
     chmod 0644 /root/.ssh/authorized_keys \n
@@ -81,7 +81,7 @@ Deploy teste:
     distro: debian
     release: hanokh
     priority: optional
-    version: "1.0.0"
+    version: "1.0.0-1"
     architecture: all
 
   script:
