@@ -51,10 +51,10 @@
   - echo "Limpando arquivos"
   - ssh "$ssh_access" "test -d /tmp/$package/DEBIAN && rm -rf /tmp/$package*"
 
- stages:
+stages:
   - deploy-teste
   - deploy-prod
- variables:
+variables:
   ssh_user: root
   server: valentino
   ssh_access: "$ssh_user@$server"
@@ -90,7 +90,7 @@ Deploy teste:
   rules:
     - if: $CI_COMMIT_BRANCH == 'main'
 
- Deploy prod:
+Deploy prod:
   stage: deploy-prod
 
   variables:
