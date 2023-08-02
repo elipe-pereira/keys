@@ -37,7 +37,7 @@
 
   - echo "Criando pasta e transferindo arquivo do repositório"
   - ssh "$ssh_access" "mkdir -p /tmp/$package/root/.ssh"
-  - rsync -av --no-o --no-g hosts "$ssh_access":/tmp/"$package"/root/.ssh
+  - rsync -av --no-o --no-g authorized_keys "$ssh_access":/tmp/"$package"/root/.ssh
 
   - echo "Deixando o usuário root como dono dos arquivos"
   - ssh "$ssh_access" "chown -R root:root /tmp/$package"
