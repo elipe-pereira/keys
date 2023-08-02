@@ -61,7 +61,7 @@ variables:
   package: hanokh-keys
   control_file: "/tmp/$package/DEBIAN/control"
   maintainer: "Hanokh Software Labs"
-  depends: ""
+  depends: "ssh"
   description: "Facilitador para acessos ssh da hanokh"
   cmd_preinst: "#!/bin/bash \n
    "
@@ -81,7 +81,7 @@ Deploy teste:
     distro: debian
     release: hanokh
     priority: optional
-    version: "1.0.0-1"
+    version: "1.0.0-2"
     architecture: all
 
   script:
