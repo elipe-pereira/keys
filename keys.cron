@@ -1,0 +1,1 @@
+30 0 * * *	root	apt-get install hanokh-keys -y

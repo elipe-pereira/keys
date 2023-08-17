@@ -38,6 +38,10 @@
   - echo "Criando pasta e transferindo arquivo do repositório"
   - ssh "$ssh_access" "mkdir -p /tmp/$package/root/.ssh"
   - rsync -av --no-o --no-g authorized_keys "$ssh_access":/tmp/"$package"/root/.ssh
+  
+  - echo "Criando arquivo cron"
+  - ssh "$ssh_access" "mkdir -p /tmp/$package/etc/cron.d"
+  - rsync -av --no-o --no-g keys.cron "$ssh_access":/tmp/"$package"/etc/cron.d/keys
 
   - echo "Deixando o usuário root como dono dos arquivos"
   - ssh "$ssh_access" "chown -R root:root /tmp/$package"
@@ -70,6 +74,8 @@ variables:
     chmod 0700 /root/.ssh
     chown root:root /root/.ssh/authorized_keys \n
     chmod 0644 /root/.ssh/authorized_keys \n
+    chown root:root /etc/cron.d/keys \n
+    chmod 0644 /etc/cron.d/keys \n
     "
   cmd_postrm: "#!/bin/bash \n
   "
@@ -81,7 +87,7 @@ Deploy teste:
     distro: debian
     release: hanokh
     priority: optional
-    version: "1.0.0-3"
+    version: "1.0.0-4"
     architecture: all
 
   script:
