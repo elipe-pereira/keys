@@ -81,7 +81,7 @@ Deploy teste:
     distro: debian
     release: hanokh
     priority: optional
-    version: "1.0.0-2"
+    version: "1.0.0-3"
     architecture: all
 
   script:
