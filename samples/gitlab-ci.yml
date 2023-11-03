@@ -27,7 +27,7 @@
   - scp /tmp/postinst-keys "$ssh_access":/tmp/"$package"/DEBIAN/postinst
   - scp /tmp/postrm-keys "$ssh_access":/tmp/"$package"/DEBIAN/postrm
 
-  - echo "Remendo arquivos"
+  - echo "Removendo arquivos"
   - rm /tmp/preinst-keys
   - rm /tmp/postinst-keys
   - rm /tmp/postrm-keys
@@ -59,8 +59,8 @@ stages:
   - deploy-teste
   - deploy-prod
 variables:
-  ssh_user: root
-  server: valentino
+  ssh_user: user
+  server: servername
   ssh_access: "$ssh_user@$server"
   package: hanokh-keys
   control_file: "/tmp/$package/DEBIAN/control"

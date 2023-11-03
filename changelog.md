@@ -1,12 +1,7 @@
 #### Changelog
-#### Hanokh-keys
+#### keys
 
 #### [Released] - 2023-08-17
-#### [1.1.0]
+#### [0.1.0]
 ##### Added
-- Adicionado arquivo cron com agendamento de update automático do pacote.
-
-#### [Released] - 2023-08-02
-#### [1.0.0]
-##### Added
-- Adicionado chaves de acesso hanokh
+- Estutura básica para criação do pacote e adição de chaves publicas, que fica a cargo do usuário.
