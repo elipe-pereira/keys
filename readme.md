@@ -15,7 +15,8 @@ usar o installer.sh para fazer o empacotamento via comando:
     ~# ./installer.sh pack
 
 Feito isso basta instalar nos servidores desejados via comando: 
-   ~# apt-get install ./keys_x_x_x_all.deb
+
+    ~# apt-get install ./keys_x_x_x_all.deb
 
 A facilidade de gerenciamento de chaves com esse pacote é aumentada quando
 você possui um repositório de pacote linux, pra onde você pode enviar os 
