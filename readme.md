@@ -49,4 +49,29 @@ que é derivada de ambos os hashes das chaves publica e privada.
 
 #### Gerando uma chave SSH e a usando pra acessar os servidores
 
+    ~# ssh-keygen -t rsa -b 4096
+
+O comando acima gera uma chave do tipo rsa e com 4096 bits. Você ainda será 
+questionado sobre o nome do arquivo (O default é id_rsa) e também se deseja 
+inserir uma senha adicional. Nos dois casos você pode simplesmente pressionar 
+enter, sendo que não é  necessário uma senha adicional porquê a posse dos 
+arquivos em si já funciona como uma autenticação.
+
+Lembrando que o comando acima é feito em um terminal e como usuário root, 
+mas você também pode usar o seu usuário normal pra executar o comando.
+E o arquivo será criando na pasta onde você estiver. O ideal é 
+mudar para a pasta **/home/usuário/.ssh** ou **/root/.ssh** se você 
+estiver como usuário root. 
+
+Se você escolheu um nome diferente do padrão (id_rsa) para o nome do
+arquivo, você deverá seguir alguns passos adicionais para que a chave 
+correta seja utilizada pelo SSH para acessar o servidor que você 
+vai acessar por meio dessa chave. 
+
+Além disso, se você inseriu uma senha (que não é necessário como disse antes) 
+você sempre terá que digitar essa senha ao acessar o servidor. 
+Se você não configurou uma senha, seu acesso nunca solicitará uma senha. O 
+que é o grande barato de usar essas chaves (além da segurança óbvio!).
+
+
 
